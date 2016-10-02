@@ -1,0 +1,1730 @@
+paths:
+  '/shoes/{id}/reviews/{fk}':
+    get:
+      tags:
+        - shoe
+      summary: Find a related item by id for reviews.
+      operationId: shoe.prototype.__findById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    delete:
+      tags:
+        - shoe
+      summary: Delete a related item by id for reviews.
+      operationId: shoe.prototype.__destroyById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - shoe
+      summary: Update a related item by id for reviews.
+      operationId: shoe.prototype.__updateById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  '/shoes/{id}/reviewers/{fk}':
+    get:
+      tags:
+        - shoe
+      summary: Find a related item by id for reviewers.
+      operationId: shoe.prototype.__findById__reviewers
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviewers
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    delete:
+      tags:
+        - shoe
+      summary: Delete a related item by id for reviewers.
+      operationId: shoe.prototype.__destroyById__reviewers
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviewers
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - shoe
+      summary: Update a related item by id for reviewers.
+      operationId: shoe.prototype.__updateById__reviewers
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviewers
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  '/shoes/{id}/reviews':
+    get:
+      tags:
+        - shoe
+      summary: Queries reviews of shoe.
+      operationId: shoe.prototype.__get__reviews
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/review'
+      deprecated: false
+    post:
+      tags:
+        - shoe
+      summary: Creates a new instance in reviews of this model.
+      operationId: shoe.prototype.__create__reviews
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    delete:
+      tags:
+        - shoe
+      summary: Deletes all reviews of this model.
+      operationId: shoe.prototype.__delete__reviews
+      parameters:
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/shoes/{id}/reviews/count':
+    get:
+      tags:
+        - shoe
+      summary: Counts reviews of shoe.
+      operationId: shoe.prototype.__count__reviews
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/shoes/{id}/reviewers':
+    get:
+      tags:
+        - shoe
+      summary: Queries reviewers of shoe.
+      operationId: shoe.prototype.__get__reviewers
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/reviewer'
+      deprecated: false
+    post:
+      tags:
+        - shoe
+      summary: Creates a new instance in reviewers of this model.
+      operationId: shoe.prototype.__create__reviewers
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    delete:
+      tags:
+        - shoe
+      summary: Deletes all reviewers of this model.
+      operationId: shoe.prototype.__delete__reviewers
+      parameters:
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/shoes/{id}/reviewers/count':
+    get:
+      tags:
+        - shoe
+      summary: Counts reviewers of shoe.
+      operationId: shoe.prototype.__count__reviewers
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /shoes:
+    post:
+      tags:
+        - shoe
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: shoe.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+    patch:
+      tags:
+        - shoe
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: shoe.upsert__patch_shoes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+    put:
+      tags:
+        - shoe
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: shoe.upsert__put_shoes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+    get:
+      tags:
+        - shoe
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: shoe.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/shoe'
+      deprecated: false
+  /shoes/replaceOrCreate:
+    post:
+      tags:
+        - shoe
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: shoe.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+  '/shoes/{id}/exists':
+    get:
+      tags:
+        - shoe
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'shoe.exists__get_shoes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/shoes/{id}':
+    head:
+      tags:
+        - shoe
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'shoe.exists__head_shoes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - shoe
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: shoe.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+    delete:
+      tags:
+        - shoe
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: shoe.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - shoe
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'shoe.prototype.updateAttributes__patch_shoes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+    put:
+      tags:
+        - shoe
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'shoe.prototype.updateAttributes__put_shoes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+  '/shoes/{id}/replace':
+    post:
+      tags:
+        - shoe
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: shoe.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+  /shoes/findOne:
+    get:
+      tags:
+        - shoe
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: shoe.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+  /shoes/update:
+    post:
+      tags:
+        - shoe
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: shoe.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/shoe'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /shoes/count:
+    get:
+      tags:
+        - shoe
+      summary: Count instances of the model matched by where from the data source.
+      operationId: shoe.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/reviews/{id}/shoe':
+    get:
+      tags:
+        - review
+      summary: Fetches belongsTo relation shoe.
+      operationId: review.prototype.__get__shoe
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/shoe'
+      deprecated: false
+  '/reviews/{id}/reviewer':
+    get:
+      tags:
+        - review
+      summary: Fetches belongsTo relation reviewer.
+      operationId: review.prototype.__get__reviewer
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  /reviews:
+    post:
+      tags:
+        - review
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: review.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    patch:
+      tags:
+        - review
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: review.upsert__patch_reviews
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    put:
+      tags:
+        - review
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: review.upsert__put_reviews
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    get:
+      tags:
+        - review
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: review.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/review'
+      deprecated: false
+  /reviews/replaceOrCreate:
+    post:
+      tags:
+        - review
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: review.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  '/reviews/{id}/exists':
+    get:
+      tags:
+        - review
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'review.exists__get_reviews_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/reviews/{id}':
+    head:
+      tags:
+        - review
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'review.exists__head_reviews_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - review
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: review.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    delete:
+      tags:
+        - review
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: review.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - review
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'review.prototype.updateAttributes__patch_reviews_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    put:
+      tags:
+        - review
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'review.prototype.updateAttributes__put_reviews_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  '/reviews/{id}/replace':
+    post:
+      tags:
+        - review
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: review.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  /reviews/findOne:
+    get:
+      tags:
+        - review
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: review.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  /reviews/update:
+    post:
+      tags:
+        - review
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: review.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /reviews/count:
+    get:
+      tags:
+        - review
+      summary: Count instances of the model matched by where from the data source.
+      operationId: review.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/reviewers/{id}/reviews/{fk}':
+    get:
+      tags:
+        - reviewer
+      summary: Find a related item by id for reviews.
+      operationId: reviewer.prototype.__findById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    delete:
+      tags:
+        - reviewer
+      summary: Delete a related item by id for reviews.
+      operationId: reviewer.prototype.__destroyById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - reviewer
+      summary: Update a related item by id for reviews.
+      operationId: reviewer.prototype.__updateById__reviews
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for reviews
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+  '/reviewers/{id}/reviews':
+    get:
+      tags:
+        - reviewer
+      summary: Queries reviews of reviewer.
+      operationId: reviewer.prototype.__get__reviews
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/review'
+      deprecated: false
+    post:
+      tags:
+        - reviewer
+      summary: Creates a new instance in reviews of this model.
+      operationId: reviewer.prototype.__create__reviews
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/review'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/review'
+      deprecated: false
+    delete:
+      tags:
+        - reviewer
+      summary: Deletes all reviews of this model.
+      operationId: reviewer.prototype.__delete__reviews
+      parameters:
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/reviewers/{id}/reviews/count':
+    get:
+      tags:
+        - reviewer
+      summary: Counts reviews of reviewer.
+      operationId: reviewer.prototype.__count__reviews
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /reviewers:
+    post:
+      tags:
+        - reviewer
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: reviewer.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    patch:
+      tags:
+        - reviewer
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: reviewer.upsert__patch_reviewers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    put:
+      tags:
+        - reviewer
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: reviewer.upsert__put_reviewers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    get:
+      tags:
+        - reviewer
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: reviewer.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/reviewer'
+      deprecated: false
+  /reviewers/replaceOrCreate:
+    post:
+      tags:
+        - reviewer
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: reviewer.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  '/reviewers/{id}/exists':
+    get:
+      tags:
+        - reviewer
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'reviewer.exists__get_reviewers_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/reviewers/{id}':
+    head:
+      tags:
+        - reviewer
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'reviewer.exists__head_reviewers_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - reviewer
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: reviewer.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    delete:
+      tags:
+        - reviewer
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: reviewer.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - reviewer
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'reviewer.prototype.updateAttributes__patch_reviewers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+    put:
+      tags:
+        - reviewer
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'reviewer.prototype.updateAttributes__put_reviewers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  '/reviewers/{id}/replace':
+    post:
+      tags:
+        - reviewer
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: reviewer.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  /reviewers/findOne:
+    get:
+      tags:
+        - reviewer
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: reviewer.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviewer'
+      deprecated: false
+  /reviewers/update:
+    post:
+      tags:
+        - reviewer
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: reviewer.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/reviewer'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /reviewers/count:
+    get:
+      tags:
+        - reviewer
+      summary: Count instances of the model matched by where from the data source.
+      operationId: reviewer.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /reviewers/login:
+    post:
+      tags:
+        - reviewer
+      summary: Login a user with username/email and password.
+      operationId: reviewer.login
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+        - name: include
+          in: query
+          description: Related objects to include in the response. See the description of return value for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: >+
+              The response body contains properties of the AccessToken created on
+              login.
+
+              Depending on the value of `include` parameter, the body may contain
+              additional properties:
+
+
+
+
+
+
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
+
+
+            type: object
+      deprecated: false
+  /reviewers/logout:
+    post:
+      tags:
+        - reviewer
+      summary: Logout a user with access token.
+      operationId: reviewer.logout
+      parameters: []
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /reviewers/confirm:
+    get:
+      tags:
+        - reviewer
+      summary: Confirm a user registration with email verification token.
+      operationId: reviewer.confirm
+      parameters:
+        - name: uid
+          in: query
+          required: true
+          type: string
+        - name: token
+          in: query
+          required: true
+          type: string
+        - name: redirect
+          in: query
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /reviewers/reset:
+    post:
+      tags:
+        - reviewer
+      summary: Reset password for a user with email.
+      operationId: reviewer.resetPassword
+      parameters:
+        - name: options
+          in: body
+          required: true
+          schema:
+            type: object
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  review:
+    properties:
+      comments:
+        default: ' '
+        type: string
+      rating:
+        default: 0
+        type: number
+        format: double
+      reviewDate:
+        default: null
+        type: string
+        format: date
+      id:
+        type: string
+      shoeId:
+        type: number
+        format: double
+      reviewerId:
+        type: number
+        format: double
+    required:
+      - comments
+      - reviewDate
+    additionalProperties: false
+  reviewer:
+    properties:
+      realm:
+        type: string
+      username:
+        type: string
+      credentials:
+        type: object
+      challenges:
+        type: object
+      email:
+        type: string
+      emailVerified:
+        type: boolean
+      status:
+        type: string
+      created:
+        type: string
+        format: date
+      lastUpdated:
+        type: string
+        format: date
+      id:
+        type: number
+        format: double
+      shoeId:
+        type: number
+        format: double
+    required:
+      - email
+    additionalProperties: false
+  shoe:
+    properties:
+      brand:
+        default: '  '
+        type: string
+      model:
+        default: ' '
+        type: string
+      color:
+        default: ''
+        type: string
+      id:
+        type: number
+        format: double
+    required:
+      - brand
+      - model
+    additionalProperties: false
+basePath: /kicksApi
+swagger: '2.0'
+info:
+  x-ibm-name: kickreviews
+  version: 1.0.0
+  title: KickReviews
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)

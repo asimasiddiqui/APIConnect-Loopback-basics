@@ -1,0 +1,18 @@
+{
+  "memory": {
+    "name": "memory",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  },
+  "cloudant_kr": {
+    "port": 443,
+    "url": "https://a41808b2-0e16-49a8-a38f-c183e7c89170-bluemix:39ba7164f0737dd1bd60997facd7b97660cfe1154121b9e2bef738afbbf2b8d2@a41808b2-0e16-49a8-a38f-c183e7c89170-bluemix.cloudant.com",
+    "database": "kickreviews",
+    "username": "a41808b2-0e16-49a8-a38f-c183e7c89170-bluemix",
+    "password": "39ba7164f0737dd1bd60997facd7b97660cfe1154121b9e2bef738afbbf2b8d2",
+    "name": "cloudant_kr",
+    "modelIndex": "",
+    "connector": "cloudant"
+  }
+}

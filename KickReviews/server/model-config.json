@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "shoe": {
+    "dataSource": "cloudant_kr",
+    "public": true
+  },
+  "review": {
+    "dataSource": "cloudant_kr",
+    "public": true
+  },
+  "reviewer": {
+    "dataSource": "cloudant_kr",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "cloudant_kr",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "cloudant_kr",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "cloudant_kr",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "cloudant_kr",
+    "public": false
+  }
+}

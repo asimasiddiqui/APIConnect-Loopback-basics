@@ -1,0 +1,39 @@
+{
+  "name": "shoe",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "brand": {
+      "type": "string",
+      "required": true,
+      "default": "  "
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "review",
+      "foreignKey": ""
+    },
+    "reviewers": {
+      "type": "hasMany",
+      "model": "reviewer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
